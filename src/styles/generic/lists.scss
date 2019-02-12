@@ -46,8 +46,7 @@ ol {
   }
 }
 
-ul,
-ol {
+ul {
   margin-left: $LIST_SIDE_MARGIN;
 
   html[dir="rtl"] & {
@@ -60,8 +59,7 @@ ol {
   }
 
   li {
-    ul,
-    ol {
+    ul {
       margin-bottom: 0;
       margin-left: $LIST_NESTED_MARGIN;
 
@@ -94,6 +92,34 @@ ul {
   &.disc {
     list-style-type: disc;
   }
+}
+
+// Ordered lists
+ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: ol-step-counter;
+}
+
+ol li {
+  counter-increment: ol-step-counter;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+ol li::before {
+  content: counter(ol-step-counter);
+  font-size: 12px;
+  background: $BLACK;
+  color: $WHITE;
+  width: 24px;
+  height: 24px;
+  border-radius: $GLOBAL_ROUNDED;
+  margin: 2px 8px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 // Definition Lists
