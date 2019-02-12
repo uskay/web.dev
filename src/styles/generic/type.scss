@@ -8,6 +8,9 @@ $HEADLINE_TEXT_SIZE: 18px;
 $HEADLINE_FONT_WEIGHT: 400;
 $PARAGRAPH_SPACING_MOBILE: 12px;
 $PARAGRAPH_SPACING: 16px;
+$PARAGRAPH_MARGIN_MOBILE: #{map-get($BODY_MOBILE, MARGIN)}px;
+$PARAGRAPH_MARGIN_TABLET: #{map-get($BODY_TABLET, MARGIN)}px;
+$PARAGRAPH_MARGIN: #{map-get($BODY, MARGIN)}px;
 
 // http://csswizardry.com/2016/02/managing-typography-on-large-apps/
 h1, h2, h3, h4, h5, h6 {
@@ -15,22 +18,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $HEADLINE_FONT_WEIGHT;
 }
 
-// default font styles for paragraphs are covered by global body styles
-// see generic/page.scss
 p {
   @include font($BODY_MOBILE);
-  @include create_margins($BODY_MOBILE);
   @include create_paragraph_spacing($PARAGRAPH_SPACING_MOBILE);
+  margin: $PARAGRAPH_MARGIN_MOBILE 0;
 
   @include bp(sm) {
     @include font($BODY_TABLET);
-    @include create_margins($BODY_TABLET);
+    margin: $PARAGRAPH_MARGIN_TABLET 0;
   }
 
   @include bp(lg) {
     @include font($BODY);
-    @include create_margins($BODY);
     @include create_paragraph_spacing($PARAGRAPH_SPACING);
+    margin: $PARAGRAPH_MARGIN 0;
   }
 }
 
