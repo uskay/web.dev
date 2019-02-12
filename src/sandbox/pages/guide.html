@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:300,400|Roboto+Mono:400,500,700|Material+Icons"
+    />
+    <link rel="stylesheet" href="../public/base.css" />
+    <link rel="stylesheet" href="../public/components.css" />
+  </head>
+  <body class="guide-landing-page">
+    <!-- TOP NAVIGATION -->
+    <!-- <nav class="top-navigation">
+      <h1 class="top-navigation__logo">web.dev</h1>
+      <ul>
+        <li><a href="/learn">Learn</a></li>
+        <li><a href="/measure">Measure</a></li>
+      </ul>
+      <input class="top-navigation__search" type="text" role="search" placeholder="Search">
+      <div>👩‍🎤</div>
+    </nav> -->
+
+    <main>
+      <div class="container">
+        <!-- BREADRUMBS AND PROGRESS -->
+        <!-- <div class="row">
+          <div class="breadcrumbs-and-progress">
+            <div class="breadcrumbs">
+              <ul>
+                <li><a href="#">Fast Load Times</a></li>
+                <li><a href="#">Measure performance in the lab long title that goes on and on</a></li>
+              </ul>
+            </div>
+            <div class="progress">
+              <div>Progress</div>
+              <div class="progress__markers">
+                <div>
+                  <span class="progress__marker--complete progress__marker--active"></span>
+                  <span class="progress__marker--complete progress__marker--active"></span>
+                  <span class="progress__marker--incomplete progress__marker--active"></span>
+                  <span class="progress__marker--incomplete"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- GUIDE AND SIDEBAR -->
+        <div class="row">
+          <article class="guide">
+            <h1 class="headline headline--two has-top-bottom-margin">
+              Use WebP Images
+            </h1>
+            <h2
+              class="headline headline--three has-top-bottom-margin has-top-bottom-margin"
+            >
+              Why should you care?
+            </h2>
+            <p>
+              WebP images are smaller than their JPEG and PNG counterparts -
+              usually on the magnitude of a 25-35% reduction in filesize. This
+              decreases page sizes and improves performance.
+            </p>
+            <ul>
+              <li>
+                YouTube found that switching to WebP thumbnails resulted in 10%
+                faster page loads.
+              </li>
+              <li>
+                Facebook experienced a 25-35% filesize savings for JPEGs and an
+                80% filesize savings for PNGs when they switched to using WebP.
+              </li>
+            </ul>
+            <p>
+              WebP is an excellent replacement for JPEG, PNG, and GIF images. In
+              addition, WebP offers both lossless and lossy compression. In
+              lossless compression no data is lost. Lossy compression can reduce
+              file size, but at the expense of possibly reducing image quality.
+            </p>
+            <p>
+              WebP is an excellent replacement for JPEG, PNG, and GIF images. In
+              addition, WebP offers both lossless and lossy compression. In
+              lossless compression no data is lost. Lossy compression can reduce
+              file size, but at the expense of possibly reducing image quality.
+            </p>
+            <blockquote>
+              WebP is an excellent replacement for JPEG, PNG, and GIF images. In
+              addition, WebP offers both lossless and lossy compression. In
+              lossless compression no data is lost. Lossy compression can reduce
+              file size, but at the expense of possibly reducing image quality.
+            </blockquote>
+            <p>
+              You can use <abbr title="Cascading Style Sheets">CSS</abbr> to
+              style your <abbr title="HyperText Markup Language">HTML</abbr>.
+            </p>
+            <h2 class="headline headline--three has-top-bottom-margin">
+              Convert images to WebP
+            </h2>
+            <p>
+              People generally use one of the following approaches for
+              converting their images to WebP: the cwebp command-line tool or
+              the Imagemin WebP plugin (npm package). The Imagemin WebP plugin
+              is generally the best choice if
+              <code>&lt;img src="images/flower1.jpg"&gt;</code>
+              tools (e.g. Webpack or Gulp), whereas the CLI is a good choice for
+              simple projects or if you’ll only need.
+            </p>
+            <h3 class="headline headline--four has-top-bottom-margin">
+              Using cwebp
+            </h3>
+            <p>
+              Convert a single file, using cwebp’s default compression settings:
+            </p>
+            <!-- NOTE: Showing a non-trivial code sample here. -->
+            <!-- Taken from: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization -->
+            <pre
+              class="prettyprint notranslate"
+              translate="no"
+            ><code><span class="kwd">var</span><span class="pln"> taskList </span><span class="pun">=</span><span class="pln"> breakBigTaskIntoMicroTasks</span><span class="pun">(</span><span class="pln">monsterTaskList</span><span class="pun">);</span><span class="pln"><br>requestAnimationFrame</span><span class="pun">(</span><span class="pln">processTaskList</span><span class="pun">);</span><span class="pln"><br><br></span><span class="kwd">function</span><span class="pln"> processTaskList</span><span class="pun">(</span><span class="pln">taskStartTime</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="kwd">var</span><span class="pln"> taskFinishTime</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; </span><span class="kwd">do</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// Assume the next task is pushed onto a stack.</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> nextTask </span><span class="pun">=</span><span class="pln"> taskList</span><span class="pun">.</span><span class="pln">pop</span><span class="pun">();</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Process nextTask.</span><span class="pln"><br>&nbsp; &nbsp; processTask</span><span class="pun">(</span><span class="pln">nextTask</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">// Go again if there’s enough time to do the next task.</span><span class="pln"><br>&nbsp; &nbsp; taskFinishTime </span><span class="pun">=</span><span class="pln"> window</span><span class="pun">.</span><span class="pln">performance</span><span class="pun">.</span><span class="pln">now</span><span class="pun">();</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">taskFinishTime </span><span class="pun">-</span><span class="pln"> taskStartTime </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">3</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">taskList</span><span class="pun">.</span><span class="pln">length </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; requestAnimationFrame</span><span class="pun">(</span><span class="pln">processTaskList</span><span class="pun">);</span><span class="pln"><br><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
+            <h3 class="headline headline--four has-top-bottom-margin">
+              Using Imagemin
+            </h3>
+            <p>
+              The Imagemin WebP plugin can be used by itself or with your
+              favorite build tool (Webpack/Gulp/Grunt/etc.). This usually
+              involves adding ~10 lines of code to a build script or the
+              configuration file for your build tool.
+            </p>
+
+            <!-- ASIDES -->
+            <div class="aside aside--note">
+              <strong>Note:</strong>
+              <span>
+                Serve WebP to newer browsers and a fallback image. The
+                <code>&lt;img&gt;</code> tag's
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src"
+                  ><code>src</code></a
+                >,
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset"
+                  ><code>srcset</code></a
+                >, and
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes"
+                  ><code>sizes</code></a
+                >
+                attributes all interact to achieve this end result.
+              </span>
+            </div>
+            <div class="aside aside--success">
+              <strong>Success:</strong>
+              <span>
+                Serve WebP to newer browsers and a fallback image. The
+                <code>&lt;img&gt;</code> tag's
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src"
+                  ><code>src</code></a
+                >,
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset"
+                  ><code>srcset</code></a
+                >, and
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes"
+                  ><code>sizes</code></a
+                >
+                attributes all interact to achieve this end result.
+              </span>
+            </div>
+            <div class="aside aside--caution">
+              <strong>Caution:</strong>
+              <span>
+                Serve WebP to newer browsers and a fallback image. The
+                <code>&lt;img&gt;</code> tag's
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src"
+                  ><code>src</code></a
+                >,
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset"
+                  ><code>srcset</code></a
+                >, and
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes"
+                  ><code>sizes</code></a
+                >
+                attributes all interact to achieve this end result.
+              </span>
+            </div>
+            <div class="aside aside--warning">
+              <strong>Warning:</strong>
+              <span>
+                Serve WebP to newer browsers and a fallback image. The
+                <code>&lt;img&gt;</code> tag's
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-src"
+                  ><code>src</code></a
+                >,
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset"
+                  ><code>srcset</code></a
+                >, and
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes"
+                  ><code>sizes</code></a
+                >
+                attributes all interact to achieve this end result.
+              </span>
+            </div>
+
+            <!-- STEPS -->
+            <div class="steps">
+              <h3 class="headline headline--four has-top-bottom-margin">
+                In this lesson:
+              </h3>
+              <ol>
+                <li>First step is here</li>
+                <li>Then the second step</li>
+                <li>
+                  Following the third and final step which is incredibly long.
+                  Like, why would you even have a step that's this long? You'd
+                  think by this point you'd have broken it into two steps, but
+                  nope! It's still going!
+                </li>
+              </ol>
+            </div>
+
+            <h3 class="headline headline--four has-top-bottom-margin">
+              In this lesson:
+            </h3>
+            <ul class="steps">
+              <li>First step is here</li>
+              <li>Then the second step</li>
+              <li>
+                Following the third and final step which is incredibly long.
+                Like, why would you even have a step that's this long? You'd
+                think by this point you'd have broken it into two steps, but
+                nope! It's still going!
+              </li>
+            </ul>
+
+            <!-- TABLES -->
+            <h3 class="headline headline--four has-top-bottom-margin">
+              Using Imagemin
+            </h3>
+            <p>
+              Otherwise, serve WebP to newer browsers and a fallback image to
+              older browsers:
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Tag</th>
+                  <th>Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pictures</td>
+                  <td>
+                    The <code>&lt;picture&gt;</code> tag provides a wrapper for
+                    zero or more <code>&lt;source&gt;</code> tags and one
+                    <code>&lt;image&gt;</code> tag.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Sources</td>
+                  <td>
+                    The &lt;source&gt; tag specifies a media resource.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>Before</th>
+                  <th>After</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <pre><code>@font-face {
+  font-family: Helvetica;
+}
+</code></pre>
+                  </td>
+                  <td>
+                    <pre><code>@font-face {
+  font-family: Helvetica;
+  font-display: swap;
+}
+</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- DISCLOSURES -->
+            <h3 class="headline headline--four has-top-bottom-margin">
+              Verify WebP Usage
+            </h3>
+            <p>
+              Lighthouse can be used to verify that all images on your site are
+              being served using WebP. Run the Lighthouse Performance Audit
+              (Lighthouse &gt; Options &gt; Performance).
+            </p>
+            <div class="disclosures">
+              <details class="disclosure" open>
+                <summary>Lighthouse in Chrome</summary>
+                <p>
+                  The browser uses the first listed source that’s in a format it
+                  supports. If the browser does not support any of the formats.
+                </p>
+              </details>
+              <details class="disclosure">
+                <summary>Developer tools for Lighthouse</summary>
+                <p>
+                  The browser uses the first listed source that’s in a format it
+                  supports. If the browser does not support any of the formats.
+                </p>
+              </details>
+              <details class="disclosure">
+                <summary>Plug in Lighthouse extension</summary>
+                <p>
+                  The browser uses the first listed source that’s in a format it
+                  supports. If the browser does not support any of the formats.
+                </p>
+              </details>
+            </div>
+
+            <!-- HORIZONTAL RULES -->
+            <h2 class="headline headline--three has-top-bottom-margin">
+              Convert images to WebP
+            </h2>
+            <p>
+              People generally use one of the following approaches for
+              converting their images to WebP: the cwebp command-line tool or
+              the Imagemin WebP plugin (npm package).
+            </p>
+            <hr />
+
+            <!-- CODELAB CTAs -->
+            <div class="eyebrow has-top-bottom-margin">Codelabs</div>
+            <h2 class="headline headline--three has-top-bottom-margin">
+              See it in action
+            </h2>
+            <p>
+              See examples of projects that convert and serve WebP images in
+              these repos:
+            </p>
+            <div class="codelab-cta">
+              <span class="codelab-cta__title">WebP & Webpack</span>
+              <button class="button button-flat">
+                Start
+              </button>
+            </div>
+
+            <div class="codelab-cta">
+              <span class="codelab-cta__title">WebP & Gulp</span>
+              <button class="button button-flat">
+                Start
+              </button>
+            </div>
+
+            <div class="codelab-cta">
+              <span class="codelab-cta__title">WebP & Grunt</span>
+              <button class="button button-flat">
+                Start
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- CALL TO ACTION: NEXT GUIDE -->
+    <div class="cta-next-guide">
+      <div class="cta-next-guide__wrapper">
+        <div class="cta-next-guide__heading">
+          Next Guide
+        </div>
+        <a class="cta-next-guide__link" href="#">
+          Reduce JavaScript payloads with code-splitting
+        </a>
+      </div>
+      <a href="#" class="go-back cta-next-guide__go-back">
+        Return to all guides
+      </a>
+    </div>
+
+    <footer>
+      Footer content
+    </footer>
+    <script src="../../bundle.js"></script>
+  </body>
+</html>

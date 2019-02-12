@@ -36,6 +36,19 @@
   }
 }
 
+// Mixin for a Material icon. This mimics the important parts of the
+// 'material-icons' class defined at http://fonts.googleapis.com/css?family=Material+Icons.
+// You can look up the name of an icon at https://material.io/icons/.
+@mixin font_material_icon() {
+  font: normal normal normal 24px/1 'Material Icons';
+  font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale; // @alternate
+  -webkit-font-smoothing: antialiased; // @alternate
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  word-wrap: normal;
+}
+
 // Sets font smoothing variables
 // @param {string} $moz The value for moz-osx-font-smoothing
 // @param {string} $webkit The value for webkit-font-smoothing

@@ -55,12 +55,28 @@ strong {
 
 abbr,
 acronym {
-  color: $PRIMARY_TEXT_COLOR;
   cursor: $CURSOR_HELP_VALUE;
   font-size: 90%;
   text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px dotted $GREY_600;
 }
 
 abbr {
   text-transform: none;
+}
+
+address,
+cite,
+dfn,
+em {
+  font-style: italic;
+}
+
+blockquote {
+  background: $GREY_100;
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 16px;
+  quotes: none;
 }
