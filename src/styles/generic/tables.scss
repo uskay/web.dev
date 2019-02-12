@@ -1,0 +1,48 @@
+@import '../settings/colors';
+@import '../settings/type';
+@import '../tools/breakpoints';
+
+// For responsive tables, just set them to block and do horizontal scroll.
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  @include font($TABLE);
+  margin: 16px 0;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+caption {
+  background: #f1f3f4;
+  border-left: 1px solid #dadce0;
+  border-right: 1px solid #dadce0;
+  border-top: 1px solid #dadce0;
+  font-weight: 500;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+th,
+td {
+  min-width: 120px;
+  border: 1px solid #dadce0;
+}
+
+th {
+  font-weight: $PRIMARY_FONT_WEIGHT_BOLD;
+  text-align: left;
+  background: $GREY_50;
+  padding: 8px 16px;
+}
+
+td {
+  vertical-align: top;
+  padding: 16px;
+  background: $WHITE;
+}
+
+table p {
+  text-align: center;
+  @include font($TABLE);
+}
