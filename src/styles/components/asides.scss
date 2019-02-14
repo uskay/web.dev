@@ -1,9 +1,14 @@
+@import '../settings/type';
+@import '../tools/mixins';
+
+// =============================================================================
+// ASIDES OVERVIEW
+//
 // Using a class here, and applying it to divs instead of following DevSites's
 // practice of applying it to aside elements. Using that many <aside>'s muddles
 // screen reader landmark navigation.
-
-@import '../settings/type';
-@import '../tools/mixins';
+//
+// =============================================================================
 
 $ASIDE_ICON_PADDING_X: 36px;
 $ASIDE_MARGIN_Y: 16px;

@@ -1,5 +1,6 @@
-@import '../settings/colors';
-@import '../settings/type';
+@import "../settings/colors";
+@import "../settings/type";
+@import "../tools/mixins";
 
 // =============================================================================
 // PAGE OVERVIEW
@@ -10,6 +11,11 @@
 
 // Default body styles
 body {
+  @include font_smoothing(
+    $FONT_SMOOTHING_MOZ,
+    $FONT_SMOOTHING_WEBKIT,
+    $FONT_SMOOTHING_RENDERING
+  );
   color: $PRIMARY_TEXT_COLOR;
   font-family: $PRIMARY_FONT;
   font-size: $PRIMARY_TEXT_SIZE;

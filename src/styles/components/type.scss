@@ -11,8 +11,6 @@
 // =============================================================================
 
 .headline {
-  @include font_smoothing($FONT_SMOOTHING_MOZ, $FONT_SMOOTHING_WEBKIT, $FONT_SMOOTHING_RENDERING);
-
   color: $PRIMARY_TEXT_COLOR;
   font-family: $HEADLINE_FONT;
   font-weight: $HEADLINE_FONT_WEIGHT;

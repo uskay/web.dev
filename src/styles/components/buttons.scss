@@ -1,0 +1,155 @@
+@import '../settings/global';
+@import '../settings/colors';
+@import '../settings/type';
+@import '../tools/mixins';
+
+// =============================================================================
+// BUTTONS OVERVIEW
+//
+// Material button styles.
+//
+// =============================================================================
+
+// 'button' = Button with primary text color and white background
+.button,
+button,
+input[type="button"],
+input[type="file"],
+input[type="image"],
+input[type="reset"],
+input[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  @include font($BUTTON);
+  align-items: center;
+  background: $WHITE;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  color: $WEB_PRIMARY_COLOR;
+  cursor: pointer;
+  display: inline-flex;
+  height: auto;
+  justify-content: center;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+  padding: 16px 24px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  transition: background-color $TRANSITION_SPEED,
+              border $TRANSITION_SPEED,
+              box-shadow $TRANSITION_SPEED;
+  white-space: nowrap;
+  width: auto;
+
+  &:hover,
+  &:focus {
+    background: mix($LINK_COLOR, $WHITE, 12%);
+    text-decoration: none;
+  }
+
+  &:active {
+    background: mix($LINK_COLOR, $WHITE, 24%);
+    @include elevation(2);
+  }
+}
+
+.button.button--disabled,
+.button[disabled],
+input[type="button"][disabled],
+input[type="file"][disabled],
+input[type="image"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled] {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+    background: $GREY_300;
+    color: $GREY_400;
+  }
+}
+
+.button + .button,
+input[type="button"] + input[type="button"],
+input[type="file"] + input[type="file"],
+input[type="image"] + input[type="image"],
+input[type="reset"] + input[type="reset"],
+input[type="submit"] + input[type="submit"] {
+  margin-left: 16px;
+}
+
+.button {
+  &.button--primary {
+    background: $WEB_PRIMARY_COLOR;
+    color: $WHITE;
+  
+    &:hover,
+    &:focus,
+    &:active {
+      background: $PRIMARY_BUTTON_FOCUS_BACKGROUND;
+      @include elevation(1);
+    }
+  }
+  
+  &.button--secondary,
+  &.button--transparent {
+    border: 1px solid $BORDER_COLOR;
+    color: inherit;
+  
+    &:hover,
+    &:focus,
+    &:active {
+      background: $SECONDARY_BUTTON_FOCUS_BACKGROUND;
+      color: $SECONDARY_BUTTON_FOCUS_COLOR;
+      border: 1px solid $BORDER_COLOR;
+    }
+  }
+  
+  &.button--flat {
+    padding: 16px 8px;
+  
+    &:hover,
+    &:focus,
+    &:active {
+      background: $SECONDARY_BUTTON_FOCUS_BACKGROUND;
+    }
+  }
+
+  // 'justify-left/right/top' = Align buttons if they are below text.
+  &.justify-left {
+    margin-left: -24px;
+  }
+
+  &.justify-right {
+    margin-right: -24px;
+  }
+
+  &.justify-top {
+    margin-top: -24px;
+  }
+
+  &.button--flat.justify-left {
+    margin-left: -8px;
+  }
+
+  &.button--flat.justify-right {
+    margin-right: -8px;
+  }
+
+  &.button--flat.justify-top {
+    margin-top: -8px;
+  }
+}
+
+// TODO (robdodson): We should see if we can get rid of these custom styles.
+.lh-signin-button {
+  display: inline-flex;
+  align-items: center;
+}
