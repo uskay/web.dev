@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="initial-scale=1, minimum-scale=1, width=device-width"
+      name="viewport"
+    />
+    <title>Table | Styles</title>
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:300,400,500|Roboto+Mono:400,500,700|Material+Icons"
+    />
+  </head>
+  <body>
+    <section id="table-styles" class="container">
+      <table>
+        <caption>
+          Desktop analysis of doggos.io
+        </caption>
+        <tbody>
+          <tr>
+            <td>Desktop</td>
+            <td>FCP</td>
+            <td>TTI</td>
+          </tr>
+          <tr>
+            <td>Homepage</td>
+            <td>1,680 ms</td>
+            <td>5,550 ms</td>
+          </tr>
+          <tr>
+            <td>Results page</td>
+            <td>2,060 ms</td>
+            <td>6,690 ms</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Before</th>
+            <th>After</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <pre><code>@font-face {
+        font-family: Helvetica;
+        }
+        </code></pre>
+            </td>
+            <td>
+              <pre><code>@font-face {
+        font-family: Helvetica;
+        font-display: swap;
+        }
+        </code></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <tbody>
+          <tr>
+            <td>Network</td>
+            <td>Device</td>
+            <td>JS</td>
+            <td>Images</td>
+            <td>CSS</td>
+            <td>HTML</td>
+            <td>Fonts</td>
+            <td>Total</td>
+            <td>Time to Interactive budget</td>
+          </tr>
+          <tr>
+            <td>Slow 3G</td>
+            <td>Moto G4</td>
+            <td>100</td>
+            <td>30</td>
+            <td>10</td>
+            <td>10</td>
+            <td>20</td>
+            <td>~170 KB</td>
+            <td>5s</td>
+          </tr>
+          <tr>
+            <td>Slow 4G</td>
+            <td>Moto G4</td>
+            <td>200</td>
+            <td>50</td>
+            <td>35</td>
+            <td>30</td>
+            <td>30</td>
+            <td>~345 KB</td>
+            <td>3s</td>
+          </tr>
+          <tr>
+            <td>WiFi</td>
+            <td>Desktop</td>
+            <td>300</td>
+            <td>250</td>
+            <td>50</td>
+            <td>50</td>
+            <td>100</td>
+            <td>~750 KB</td>
+            <td>2s</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <td>
+              <p
+                style="
+                  text-align: center;
+              "
+              >
+                <img
+                  src="https://web.dev/fast/use-imagemin-to-compress-images/20kb.jpg"
+                  width="100%"
+                />
+              </p>
+
+              <p
+                style="
+                  text-align: center;
+              "
+              >
+                20 KB
+              </p>
+            </td>
+            <td>
+              <p>
+                <img
+                  src="https://web.dev/fast/use-imagemin-to-compress-images/12kb.jpg"
+                  width="100%"
+                />
+              </p>
+
+              <p>12 KB</p>
+            </td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <script src="../../bundle.js"></script>
+  </body>
+</html>

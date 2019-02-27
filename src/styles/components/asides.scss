@@ -20,6 +20,49 @@ $ASIDE_PADDING_Y: 24px;
   font-size: $SECONDARY_TEXT_SIZE;
   margin: $ASIDE_MARGIN_Y 0;
   padding: $ASIDE_PADDING_Y $ASIDE_PADDING_X $ASIDE_PADDING_Y ($ASIDE_PADDING_X + $ASIDE_ICON_PADDING_X);
+
+  &--note,
+  &--special {
+    background: $LIGHT_BLUE_ASIDE;
+    border-left: 3px solid $BLUE_A400;
+  }
+
+  &--note::before,
+  &--special::before {
+    content: 'star';
+  }
+
+  &--caution {
+    background: $LIGHT_ORANGE_ASIDE;
+    border-left: 3px solid $ORANGE_600;
+  }
+
+  &--caution::before {
+    content: 'error';
+  }
+
+  &--objective,
+  &--success {
+    background: $LIGHT_GREEN_ASIDE;
+    border-left: 3px solid $GREEN_400;
+  }
+
+  &--objective::before {
+    content: 'school';
+  }
+
+  &--success::before {
+    content: 'check_circle';
+  }
+
+  &--warning {
+    background: $LIGHT_RED_ASIDE;
+    border-left: 3px solid $RED_600;
+  }
+
+  &--warning::before {
+    content: 'warning';
+  }
 }
 
 .aside::before {
@@ -43,47 +86,4 @@ $ASIDE_PADDING_Y: 24px;
 
 .aside strong {
   line-height: $PRIMARY_LINE_HEIGHT;
-}
-
-.aside--note,
-.aside--special {
-  background: $LIGHT_BLUE_ASIDE;
-  border-left: 3px solid $BLUE_A400;
-}
-
-.aside--note::before,
-.aside--special::before {
-  content: 'star';
-}
-
-.aside--caution {
-  background: $LIGHT_ORANGE_ASIDE;
-  border-left: 3px solid $ORANGE_600;
-}
-
-.aside--caution::before {
-  content: 'error';
-}
-
-.aside--objective,
-.aside--success {
-  background: $LIGHT_GREEN_ASIDE;
-  border-left: 3px solid $GREEN_400;
-}
-
-.aside--objective::before {
-  content: 'school';
-}
-
-.aside--success::before {
-  content: 'check_circle';
-}
-
-.aside--warning {
-  background: $LIGHT_RED_ASIDE;
-  border-left: 3px solid $RED_600;
-}
-
-.aside--warning::before {
-  content: 'warning';
 }

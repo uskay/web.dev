@@ -86,7 +86,7 @@ input[type="submit"] + input[type="submit"] {
 }
 
 .button {
-  &.button--primary {
+  &--primary {
     background: $WEB_PRIMARY_COLOR;
     color: $WHITE;
   
@@ -98,8 +98,8 @@ input[type="submit"] + input[type="submit"] {
     }
   }
   
-  &.button--secondary,
-  &.button--transparent {
+  &--secondary,
+  &--transparent {
     border: 1px solid $BORDER_COLOR;
     color: inherit;
   
@@ -112,7 +112,7 @@ input[type="submit"] + input[type="submit"] {
     }
   }
   
-  &.button--flat {
+  &--flat {
     padding: 16px 8px;
   
     &:hover,
@@ -123,29 +123,29 @@ input[type="submit"] + input[type="submit"] {
   }
 
   // 'justify-left/right/top' = Align buttons if they are below text.
-  &.justify-left {
+  &--justify-left {
     margin-left: -24px;
   }
 
-  &.justify-right {
+  &--justify-right {
     margin-right: -24px;
   }
 
-  &.justify-top {
+  &--justify-top {
     margin-top: -24px;
   }
+}
 
-  &.button--flat.justify-left {
-    margin-left: -8px;
-  }
+.button--flat.button--justify-left {
+  margin-left: -8px;
+}
 
-  &.button--flat.justify-right {
-    margin-right: -8px;
-  }
+.button--flat.button--justify-right {
+  margin-right: -8px;
+}
 
-  &.button--flat.justify-top {
-    margin-top: -8px;
-  }
+.button--flat.button--justify-top {
+  margin-top: -8px;
 }
 
 // TODO (robdodson): We should see if we can get rid of these custom styles.

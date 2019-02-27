@@ -22,7 +22,7 @@
   overflow-wrap: initial;
   word-wrap: initial;
 
-  &.headline--display-one {
+  &--display-one {
     @include font($DISPLAY_1_MOBILE);
     @include create_margins($DISPLAY_1_MOBILE);
 
@@ -37,7 +37,7 @@
     }
   }
 
-  &.headline--display-two {
+  &--display-two {
     @include font($DISPLAY_2_MOBILE);
     @include create_margins($DISPLAY_2_MOBILE);
 
@@ -52,7 +52,7 @@
     }
   }
 
-  &.headline--one {
+  &--one {
     @include font($HEADLINE_1_MOBILE);
     @include create_margins($HEADLINE_1_MOBILE);
 
@@ -67,7 +67,7 @@
     }
   }
 
-  &.headline--two {
+  &--two {
     @include font($HEADLINE_2_MOBILE);
     @include create_margins($HEADLINE_2_MOBILE);
 
@@ -82,7 +82,7 @@
     }
   }
 
-  &.headline--three {
+  &--three {
     @include font($HEADLINE_3_MOBILE);
     @include create_margins($HEADLINE_3_MOBILE);
 
@@ -97,7 +97,7 @@
     }
   }
 
-  &.headline--four {
+  &--four {
     @include font($HEADLINE_4_MOBILE);
     @include create_margins($HEADLINE_4_MOBILE);
 
@@ -112,7 +112,7 @@
     }
   }
 
-  &.headline--subhead {
+  &--subhead {
     @include font($SUBHEAD_MOBILE);
     @include create_margins($SUBHEAD_MOBILE);
 

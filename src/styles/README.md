@@ -5,4 +5,6 @@ Learn more @ https://speakerdeck.com/dafed/managing-css-projects-with-itcss
 - tools: Mixins and functions
 - generic: Ground-zero styles and unclassed HTML elements (type selectors)
 - components: Chunks of UI
-- overrides: Helpers and...overrides :)
+- pages: Page-specific styles (use sparingly if at all)
+
+To preview your SASS you can use [Sassmeister](https://www.sassmeister.com/).
