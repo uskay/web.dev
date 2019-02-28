@@ -5,37 +5,35 @@
 //
 // =============================================================================
 
-// XSmall devices (phones, 380px and up)
-$BREAKPOINT_VALUE_MOBILE_SMALL: '(min-width: 380px)';
+// Feature phones
+$BREAKPOINT_VALUE_XXSMALL: '(min-width: 241px)';
 
-// Small devices (tablets, 600px and up)
-$BREAKPOINT_VALUE_MOBILE: '(min-width: 600px)';
+// Smart phones
+$BREAKPOINT_VALUE_XSMALL: '(min-width: 321px)';
+$BREAKPOINT_VALUE_SMALL: '(min-width: 481px)';
 
-// Medium devices (tablets, 840px and up)
-$BREAKPOINT_VALUE_TABLET: '(min-width: 840px)';
+// Tablets
+$BREAKPOINT_VALUE_MEDIUM: '(min-width: 865px)';
 
-// Large devices (landscape tablets/small desktops, 1024px and up)
-$BREAKPOINT_VALUE_TABLET_LANDSCAPE: '(min-width: 1024px)';
-
-// XLarge devices (large desktops, 1440px and up)
-$BREAKPOINT_VALUE_DESKTOP: '(min-width: 1440px)';
+// Desktops
+$BREAKPOINT_VALUE_LARGE: '(min-width: 1264px)';
 
 // Media breakpoint helper
 // Credit: http://css-tricks.com/conditional-media-query-mixins/
 @mixin bp($point) {
-  @if $point == xs {
-    @media #{$BREAKPOINT_VALUE_MOBILE_SMALL} { @content; }
+  @if $point == xxsm {
+    @media #{$BREAKPOINT_VALUE_XXSMALL} { @content; }
+  }
+  @else if $point == xsm {
+    @media #{$BREAKPOINT_VALUE_XSMALL} { @content; }
   }
   @else if $point == sm {
-    @media #{$BREAKPOINT_VALUE_MOBILE} { @content; }
+    @media #{$BREAKPOINT_VALUE_SMALL} { @content; }
   }
   @else if $point == md {
-    @media #{$BREAKPOINT_VALUE_TABLET} { @content; }
+    @media #{$BREAKPOINT_VALUE_MEDIUM} { @content; }
   }
   @else if $point == lg {
-    @media #{$BREAKPOINT_VALUE_TABLET_LANDSCAPE} { @content; }
-  }
-  @else if $point == xl {
-    @media #{$BREAKPOINT_VALUE_DESKTOP} { @content; }
+    @media #{$BREAKPOINT_VALUE_LARGE} { @content; }
   }
 }

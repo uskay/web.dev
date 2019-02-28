@@ -15,49 +15,59 @@
   <body>
     <section id="typography-styles" class="container">
       <div class="page">
-        <p class="headline headline--display-one has-bottom-margin">
-          Display one<br />
-          with line break
-        </p>
-
-        <p class="headline headline--display-two has-bottom-margin">
-          Display two<br />
-          with line break
-        </p>
-
-        <p class="headline headline--one has-bottom-margin">
+        <h1>
           Headline one<br />
           with line break
-        </p>
+        </h1>
 
-        <p class="headline headline--two has-bottom-margin">
+        <h2>
           Headline two<br />
           with line break
-        </p>
+        </h2>
 
-        <p class="headline headline--three has-bottom-margin">
+        <h3>
           Headline three<br />
           with line break
-        </p>
+        </h3>
 
-        <p class="headline headline--four has-bottom-margin">
+        <h4>
           Headline four<br />
           with line break
+        </h4>
+
+        <p class="copy">
+          Body copy that includes a line break<br />
+          and <strong>bold</strong>, <em>italic</em>, and
+          <a href="#">embedded link</a> inline styles.<br />
+          Used mostly for blog posts and guides.
         </p>
 
-        <p class="headline headline--subhead has-bottom-margin">
-          Subhead<br />
+        <hr>
+
+        <p class="headline headline--one">
+          Paragraph with .headline--one<br />
           with line break
         </p>
 
-        <p class="eyebrow has-bottom-margin">
-          A line of eyebrow text
+        <p class="headline headline--two">
+          Paragraph with .headline--two<br />
+          with line break
         </p>
 
-        <p class="has-bottom-margin">
-          Body copy that includes a line break<br />
-          and <strong>bold</strong>, <em>italic</em>, and
-          <a href="#">embedded link</a> inline styles.
+        <p class="headline headline--three">
+          Paragraph with .headline--three<br />
+          with line break
+        </p>
+
+        <p class="headline headline--four">
+          Paragraph with .headline--four<br />
+          with line break
+        </p>
+
+        <hr>
+
+        <p class="eyebrow">
+          A line of eyebrow text
         </p>
 
         <p class="footnote has-bottom-margin">
@@ -65,16 +75,11 @@
           with line break
         </p>
 
+        <hr>
+
         <!-- default style tests -->
 
-        <h1>Header one (no class)</h1>
-        <h2>Header two (no class)</h2>
-        <h3>Header three (no class)</h3>
-        <h4>Header four (no class)</h4>
-        <h5>Header five (no class)</h5>
-        <h6>Header six (no class)</h6>
-
-        <p>Paragraph (no class)</p>
+        <p>Paragraph</p>
 
         <ul>
           <li>Unordered list</li>
@@ -90,13 +95,7 @@
 
         <ol>
           <li>Ordered list</li>
-          <li>
-            That includes
-            <ol>
-              <li>A sublist</li>
-              <li>Inside it</li>
-            </ol>
-          </li>
+          <li>With bullets</li>
           <li>And numbers</li>
         </ol>
 
@@ -109,8 +108,9 @@
         <ol class="no-bullet">
           <li>Ordered list</li>
           <li>That does not include</li>
-          <li>Numbers</li>
+          <li>Bullets</li>
         </ol>
+
       </div>
     </section>
     <script src="../../bundle.js"></script>

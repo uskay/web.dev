@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="initial-scale=1, minimum-scale=1, width=device-width"
+      name="viewport"
+    />
+    <title>Grid | Styles</title>
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:300,400,500|Roboto+Mono:400,500,700|Material+Icons"
+    />
+    <style>
+      h2 {
+        text-align: center;
+      }
+      .grid__item > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: pink;
+        min-height: 570px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="grid-styles">
+      <h2>Single column grid</h2>
+      <div class="grid">
+        <div class="grid__columns" role="list">
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+        </div>
+      </div>
+      <h2>Two-column grid</h2>
+      <div class="grid">
+        <div class="grid__columns grid__columns--two" role="list">
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+        </div>
+      </div>
+      <h2>Three-column grid</h2>
+      <div class="grid">
+        <div class="grid__columns grid__columns--three" role="list">
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+          <div class="grid__item" role="listitem">
+            <div>Content goes here</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../../bundle.js"></script>
+  </body>
+</html>

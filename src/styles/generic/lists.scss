@@ -95,31 +95,31 @@ ul {
 }
 
 // Ordered lists
-ol {
+ol:not(.no-bullet) {
   list-style: none;
   padding: 0;
   counter-reset: ol-step-counter;
-}
 
-ol li {
-  counter-increment: ol-step-counter;
-  display: flex;
-  margin-bottom: 8px;
-}
+  li {
+    counter-increment: ol-step-counter;
+    display: flex;
+    margin-bottom: 8px;
+  }
 
-ol li::before {
-  content: counter(ol-step-counter);
-  font-size: 12px;
-  background: $BLACK;
-  color: $WHITE;
-  width: 24px;
-  height: 24px;
-  border-radius: $GLOBAL_ROUNDED;
-  margin: 2px 8px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  li::before {
+    content: counter(ol-step-counter);
+    font-size: 12px;
+    background: $BLACK;
+    color: $WHITE;
+    width: 24px;
+    height: 24px;
+    border-radius: $GLOBAL_ROUNDED;
+    margin: 2px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
 }
 
 // Definition Lists
@@ -136,16 +136,17 @@ dl {
 li,
 dt,
 dd {
-  @include font($BODY_MOBILE);
-  @include create_margins($BODY_MOBILE);
+  @include font($BODY);
+  // @include font($BODY_MOBILE);
+  // @include create_margins($BODY_MOBILE);
 
-  @include bp(sm) {
-    @include font($BODY_TABLET);
-    @include create_margins($BODY_TABLET);
-  }
+  // @include bp(sm) {
+  //   @include font($BODY_TABLET);
+  //   @include create_margins($BODY_TABLET);
+  // }
 
-  @include bp(lg) {
-    @include font($BODY);
-    @include create_margins($BODY);
-  }
+  // @include bp(lg) {
+  //   @include font($BODY);
+  //   @include create_margins($BODY);
+  // }
 }

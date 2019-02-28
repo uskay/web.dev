@@ -1,0 +1,32 @@
+@import '../tools/breakpoints';
+@import '../tools/mixins';
+
+// =============================================================================
+// CONTAINER OVERVIEW
+// 
+// A generic responsive container. Useful for demos.
+//
+// =============================================================================
+
+.container {
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+
+  @include bp(sm) {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include bp(lg) {
+    max-width: 1024px;
+  }
+
+  @include bp(xl) {
+    max-width: 1440px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}

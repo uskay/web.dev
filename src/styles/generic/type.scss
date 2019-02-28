@@ -3,46 +3,51 @@
 @import '../settings/type';
 @import '../tools/mixins';
 @import '../tools/breakpoints';
+@import '../components/type';
 
-$HEADLINE_TEXT_SIZE: 18px;
-$HEADLINE_FONT_WEIGHT: 400;
-$PARAGRAPH_SPACING_MOBILE: 12px;
-$PARAGRAPH_SPACING: 16px;
-$PARAGRAPH_MARGIN_MOBILE: #{map-get($BODY_MOBILE, MARGIN)}px;
-$PARAGRAPH_MARGIN_TABLET: #{map-get($BODY_TABLET, MARGIN)}px;
-$PARAGRAPH_MARGIN: #{map-get($BODY, MARGIN)}px;
+// $PARAGRAPH_SPACING_MOBILE: 12px;
+// $PARAGRAPH_SPACING: 16px;
+// $PARAGRAPH_MARGIN_MOBILE: #{map-get($BODY_MOBILE, MARGIN)}px;
+// $PARAGRAPH_MARGIN_TABLET: #{map-get($BODY_TABLET, MARGIN)}px;
+// $PARAGRAPH_MARGIN: #{map-get($BODY, MARGIN)}px;
 
-// http://csswizardry.com/2016/02/managing-typography-on-large-apps/
 h1, h2, h3, h4, h5, h6 {
-  font-size: $HEADLINE_TEXT_SIZE;
-  font-weight: $HEADLINE_FONT_WEIGHT;
+  @extend .headline;
+}
+
+h1 {
+  @extend .headline--one;
+}
+
+h2 {
+  @extend .headline--two;
+}
+
+h3 {
+  @extend .headline--three;
+}
+
+h4 {
+  @extend .headline--four;
 }
 
 p {
-  @include font($BODY_MOBILE);
-  @include create_paragraph_spacing($PARAGRAPH_SPACING_MOBILE);
-  margin: $PARAGRAPH_MARGIN_MOBILE 0;
+  @include font($BODY);
+  // @include font($BODY_MOBILE);
+  // @include create_paragraph_spacing($PARAGRAPH_SPACING_MOBILE);
+  // margin: $PARAGRAPH_MARGIN_MOBILE 0;
 
-  @include bp(sm) {
-    @include font($BODY_TABLET);
-    margin: $PARAGRAPH_MARGIN_TABLET 0;
-  }
+  // @include bp(sm) {
+  //   @include font($BODY_TABLET);
+  //   margin: $PARAGRAPH_MARGIN_TABLET 0;
+  // }
 
-  @include bp(lg) {
-    @include font($BODY);
-    @include create_paragraph_spacing($PARAGRAPH_SPACING);
-    margin: $PARAGRAPH_MARGIN 0;
-  }
+  // @include bp(lg) {
+  //   @include font($BODY);
+  //   @include create_paragraph_spacing($PARAGRAPH_SPACING);
+  //   margin: $PARAGRAPH_MARGIN 0;
+  // }
 }
-
-// hr {
-//   border: $h-hr-border-style $h-hr-border-color;
-//   border-width: $h-hr-border-width 0 0;
-//   clear: both;
-//   height: 0;
-//   margin-bottom: $h-hr-margin-bottom;
-//   margin-top: $h-hr-margin-top;
-// }
 
 em,
 i {
