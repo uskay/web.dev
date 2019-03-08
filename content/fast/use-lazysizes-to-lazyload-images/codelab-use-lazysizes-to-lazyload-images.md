@@ -22,9 +22,7 @@ makes this a very simple strategy to implement.
 
 ## Add the lazysizes script to the page
 
-- Click the **Remix This** button to make the project editable.
-
-<web-screenshot type="remix"></web-screenshot>
+- Click the **Remix to Edit** button to make the project editable.
 
 `lazysizes.min.js` has already been downloaded and added to this Glitch. To
 include it in the page:
@@ -79,8 +77,6 @@ That's it! To see these changes in action, follow these steps:
 
 - Click on the **Show Live** button to view the live version of the Glitch.
 
-<web-screenshot type="show-live"></web-screenshot>
-
 - Open the console and find the images that were just added. Their classes
   should change from `lazyload` to `lazyloaded` as you scroll down the page.
 
@@ -91,7 +87,7 @@ That's it! To see these changes in action, follow these steps:
 
 ![Images being lazy loaded](./lazysizes-waterfall.png)
 
-## Verify using Lighthouse
+## Verify with Lighthouse
 
 Lastly, it's a good idea to use Lighthouse to verify these changes. Lighthouse's
 "Defer offscreen images" performance audit will indicate if you've forgotten to
@@ -99,11 +95,13 @@ add lazy loading to any offscreen images.
 
 - Click on the **Show Live** button to view the live version of the your Glitch.
 
-<web-screenshot type="show-live"></web-screenshot>
+With the live site open:
+1. Open Chrome DevTools by pressing `CMD + OPTION + i` / `CTRL + SHIFT + i`.
+1. Click on the **Audits** tab.
+1. Check the **Performance** checkbox.
+1. Click **Run audits**.
 
-- Run the Lighthouse performance audit (Lighthouse > Options > Performance) on
-  the live version of your Glitch and verify that the "Defer offscreen images"
-  audit was passed.
+Verify that the "Defer offscreen images" audit passed.
 
 ![Passing 'Efficiently encode images' audit in Lighthouse](./lighthouse_passing.png)
 
