@@ -1,0 +1,18 @@
+a {
+  text-decoration: none;
+  color: #3740FF;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  text-decoration: underline;
+  outline: 1px solid rgba(63, 196, 255, 1);
+}
+
+a:active {
+  background-color: rgba(63, 196, 255, .16);
+}

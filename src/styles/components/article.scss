@@ -1,0 +1,65 @@
+// =============================================================================
+// ARTICLE OVERVIEW
+//
+// An article is a preview for a post. It lives inside of a card and can be
+// displayed in a grid on the blog landing page, or at the end of a post
+// to point users at related content.
+//
+// =============================================================================
+
+article.image cover {
+  margin-top: -1px;
+}
+
+article figure {
+  padding: 0;
+  margin: 0 0 16px;
+  background-color: #f3f3f3;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+article cover {
+  display: block;
+  margin: 2em 0;
+}
+article .image cover {
+  margin-top: -1px;
+}
+
+@media screen and (max-width: 864px) {
+  article .image cover {
+    margin-top: 2em;
+  }
+
+  // The first card on the blog page should not display its desc eyebrow
+  // article li:first-child article.image cover {
+  //   margin-top: 0;
+  // }
+}
+
+// card with image is headline_2_small
+// card without image is headline_2
+
+article desc {
+  display: block;
+}
+
+article desc::before {
+  background-color: #3740FF;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 32px;
+  position: absolute;
+  top: 32px;
+  width: 64px;
+  z-index: -1;
+}
+
+article desc p {
+  color: #202124;
+}

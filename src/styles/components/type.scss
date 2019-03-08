@@ -16,11 +16,6 @@
   font-size: $HEADLINE_TEXT_SIZE;
   line-height: $HEADLINE_LINE_HEIGHT;
   font-weight: $HEADLINE_FONT_WEIGHT;
-  // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
   overflow-wrap: initial;
   word-wrap: initial;
 

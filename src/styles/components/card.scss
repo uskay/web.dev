@@ -1,0 +1,76 @@
+@import '../tools/breakpoints';
+
+// =============================================================================
+// CARD OVERVIEW
+//
+// A card is a generic container with a bit of padding and hover/focus/active
+// states.
+//
+// =============================================================================
+
+.card {
+  display: block;
+  position: relative;
+  transition: all .1s;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 24px;
+  
+  @include bp(sm) {
+    padding: 32px;
+  }
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.card::after {
+  content: "";
+  transition: all .1s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.card:hover {
+  box-shadow:
+    0 2px 4px -1px rgba(0,0,0,.2),
+    0 4px 5px 0 rgba(0,0,0,.14),
+    0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+.card:hover::after {
+  background-color: rgba(32, 33, 36, .0);
+}
+
+.card:focus {
+  box-shadow:
+    0 2px 4px -1px rgba(0,0,0,.2),
+    0 4px 5px 0 rgba(0,0,0,.14),
+    0 1px 10px 0 rgba(0,0,0,.12);
+  outline: none;
+}
+
+.card:focus::after {
+  background-color: rgba(32, 33, 36, .04);
+}
+
+.card:active {
+  box-shadow:
+    0 8px 10px -5px rgba(0,0,0,.2),
+    0 16px 24px 2px rgba(0,0,0,.14),
+    0 6px 30px 5px rgba(0,0,0,.12);
+  outline: none;
+}
+
+.card:active::after {
+  background-color: rgba(32, 33, 36, .08);
+}

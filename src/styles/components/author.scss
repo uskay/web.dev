@@ -1,0 +1,65 @@
+// =============================================================================
+// AUTHOR OVERVIEW
+//
+// An author shows a thumbnail of the author's profile photo, a bit of info
+// about the author (name, social media, etc) and shows the date when they
+// published the current piece of content.
+//
+// =============================================================================
+
+author {
+  display: block;
+  margin: calc(1em - 8px) -8px -8px;
+  padding: 8px;
+  max-width: 240px;
+}
+
+author figure {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  float: left;
+  margin: 0 12px 0 0 !important;
+  background-color: #dadce0;
+}
+
+author cite,
+author time {
+  display: block;
+  font-size: 0.875em;
+  line-height: 1.428em;
+  font-style: normal;
+}
+
+author cite {
+  color: #202124;
+}
+
+author time {
+  color: #5F6368;
+}
+
+author ul {
+  display: block;
+  overflow: hidden;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+author ul li {
+  font-size: 0.875em !important;
+  line-height: 1.429em !important;
+  margin: 0 !important;
+  float: left;
+}
+
+author ul li::after {
+  content: "·";
+  display: inline-block;
+  margin: 0 4px;
+}
+
+author ul li:last-of-type::after {
+  content: "";
+  margin: 0;
+}

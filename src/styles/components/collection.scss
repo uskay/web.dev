@@ -1,0 +1,179 @@
+@import '../tools/breakpoints';
+
+// =============================================================================
+// COLLECTION OVERVIEW
+//
+// A collection is a preview for a grouping of posts. It lives inside of a card
+// and can be displayed in a list on the learn landing page, or at the end of a
+// post to point users at related content.
+//
+// Collections always have an illustration cover with their header text
+// appearing on top of the illustration.
+//
+// =============================================================================
+
+#collection-1 {
+  background-image: url(/img/collection-cover-1.png);
+}
+
+#collection-2 {
+  background-image: url(/img/collection-cover-2.png);
+}
+
+collection {
+  display: block;
+  position: relative;
+}
+
+.collection--large {
+  @include bp(md) {
+    -webkit-box-align: stretch;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    align-items: flex-start;
+    display: grid;
+    flex-flow: row wrap;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    grid-template-columns: repeat(8, minmax(0,1fr));
+    position: relative;
+  }
+}
+
+collection cover {
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid #dadce0;
+  display: flex;
+  grid-column-end: span 4;
+  height: 144px;
+  justify-content: left;
+  margin-top: 48px;
+  padding: 24px;
+  position: relative;
+  
+  @include bp(xsm) {
+    height: 208px;
+  }
+  
+  @include bp(sm) {
+    height: 272px;
+    margin-top: 56px;
+  }
+  
+  @include bp(md) {
+    margin-top: 0;
+    padding: 32px;
+  }
+}
+
+collection cover figure {
+  background-color: #fcfcfd;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: auto 200px;
+  border-radius: 3px;
+  bottom: 0;
+  height: 272px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+collection cover h2 {
+  margin-right: 144px;
+}
+
+collection desc {
+  display: block;
+  grid-column-end: span 4;
+  margin: 0;
+  
+  @include bp(md) {
+    padding-left: 32px;
+  }
+}
+
+collection desc::before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 2px;
+  background-color: #3740FF;
+}
+
+collection desc::before,
+collection desc .info {
+  position: absolute;
+  top: -48px; // Match the margin-top of the cover
+
+  @include bp(sm) {
+    top: -56px; // Match the margin-top of the cover
+  }
+  
+  @include bp(md) {
+    position: static;
+  }
+}
+
+collection desc .info {
+  margin: 0;
+  list-style: none;
+  padding: 12px 0 0;
+  height: 36px;
+  overflow: hidden;
+}
+
+collection desc .info li {
+  display: block;
+  float: left;
+  font-family: "Google Sans", san-sans-serif;
+  font-size: 12px;
+  color: #5F6368;
+
+  @include bp(xsm) {
+    font-size: 14px;
+  }
+}
+
+collection desc .info li::after {
+  content: "·";
+  display: inline-block;
+  margin: 0 8px;
+}
+
+collection desc .info .category {
+  color: #3740FF;
+  font-weight: 500;
+}
+
+collection desc .info li:last-of-type::after {
+  content: "";
+  margin: 0;
+}
+
+collection desc .info .more-info::after {
+  content: "";
+
+  @include bp(sm) {
+    content: "·";
+  }
+}
+
+collection desc .info .updated {
+  display: none;
+
+  @include bp(sm) {
+    display: inline-block;
+  }
+}
+
+collection p {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #202124;
+  margin: 1em 0;
+}

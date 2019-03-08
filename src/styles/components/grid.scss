@@ -52,3 +52,7 @@
 .grid__item {
   grid-column-end: span 4;
 }
+
+.grid__item--large {
+  grid-column-end: span 8;
+}
