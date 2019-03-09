@@ -15,19 +15,78 @@
   <body>
     <section id="article-styles">
       <div class="grid">
+        <div class="grid__columns grid__columns--two" role="list">
+          <div class="grid__item--large">
+            <a href="#" class="card">
+              <article class="article article--large">
+                <div class="article__cover article__cover--large">
+                  <figure class="article__figure">
+                    <img
+                      class="article__image"
+                      src="https://storage.googleapis.com/gd-wagtail-prod-assets/images/ANDROIDFONTS_3x2.max-1200x800.jpegquality-90.png"
+                      alt="Figure 2"
+                      width="100%"
+                    />
+                  </figure>
+                  <h2 class="article__headline--with-image">
+                    Serve modern code to modern browsers for faster page loads
+                  </h2>
+                  <author>
+                    <figure></figure>
+                    <cite>Joe Doe</cite> <time>Jan 31, 2019</time>
+                  </author>
+                </div>
+                <div class="article__desc article__desc--large">
+                  <ul class="article__info-list">
+                    <li
+                      class="article__info-listitem article__info-listitem--category"
+                    >
+                      Guide
+                    </li>
+                    <li
+                      class="article__info-listitem article__info-listitem--published"
+                    >
+                      <time>May 24, 2018</time>
+                    </li>
+                    <li
+                      class="article__info-listitem article__info-listitem--updated"
+                    >
+                      Updated <time>May 24, 2018</time>
+                    </li>
+                  </ul>
+                  <p class="article__summary article__summary--large">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis ut tortor lacus. Proin neque arcu, porttitor sit amet
+                    nisi quis, pharetra rutrum turpis.
+                  </p>
+                  <tags>
+                    <tag class="chip">Performance</tag>
+                    <tag class="chip">Github</tag>
+                  </tags>
+                </div>
+              </article>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="grid">
         <div class="grid__columns grid__columns--three" role="list">
           <div class="grid__item" role="listitem">
             <a href="#" class="card">
-              <article class="image">
-                <cover>
-                  <figure>
+              <article class="article">
+                <div class="article__cover article__cover--with-image">
+                  <figure class="article__figure">
                     <img
+                      class="article__image"
                       src="https://4.bp.blogspot.com/-3RHu87FmmvI/XEtf86FEcwI/AAAAAAAAG8k/PcLWlYrRPr8xGXUsQ0RBuOUzK7nSIsyyACLcBGAs/s1600/Gallery%2B%252837%2Bof%2B37%2529.jpg"
                       alt="Figure 1"
                       width="100%"
                     />
                   </figure>
-                  <h2 class="headline headline--two-small">
+                  <h2 class="article__headline--with-image">
                     Google opens new innovation space in San Francisco for the
                     developer community
                   </h2>
@@ -35,20 +94,20 @@
                     <figure></figure>
                     <cite>Joe Doe</cite> <time>Jan 31, 2019</time>
                   </author>
-                </cover>
-                <desc>
-                  <p>
+                </div>
+                <div class="article__desc">
+                  <p class="article__summary">
                     Google's Developer Relations team is opening a new
                     innovation space at 543 Howard St. in San Francisco.
                   </p>
-                </desc>
+                </div>
               </article>
             </a>
           </div>
           <div class="grid__item" role="listitem">
             <a href="#" class="card">
-              <article class="text">
-                <cover>
+              <article class="article">
+                <div class="article__cover">
                   <h2>
                     Adapting to the needs of learners, educators and schools
                     with Chromebooks
@@ -57,20 +116,20 @@
                     <figure></figure>
                     <cite>Joe Doe</cite> <time>Jan 31, 2019</time>
                   </author>
-                </cover>
-                <desc>
-                  <p>
+                </div>
+                <div class="article__desc">
+                  <p class="article__summary">
                     Google's Developer Relations team is opening a new
                     innovation space at 543 Howard St. in San Francisco.
                   </p>
-                </desc>
+                </div>
               </article>
             </a>
           </div>
           <div class="grid__item">
             <a href="#" class="card">
-              <article class="text">
-                <cover>
+              <article class="article">
+                <div class="article__cover">
                   <h2>
                     Choose your own adventure with 13 Google for Education tools
                   </h2>
@@ -78,21 +137,29 @@
                     <figure></figure>
                     <cite>Joe Doe</cite> <time>Jan 31, 2019</time>
                   </author>
-                </cover>
-                <desc>
-                  <p>
+                </div>
+                <div class="article__desc">
+                  <p class="article__summary">
                     Google's Developer Relations team is opening a new
                     innovation space at 543 Howard St. in San Francisco.
                   </p>
-                </desc>
+                </div>
               </article>
             </a>
           </div>
           <div class="grid__item" role="listitem">
             <a href="#" class="card">
-              <article class="text">
-                <cover>
-                  <h2>
+              <article class="article">
+                <div class="article__cover article__cover--with-image">
+                  <figure class="article__figure">
+                    <img
+                      class="article__image"
+                      src="https://4.bp.blogspot.com/-3RHu87FmmvI/XEtf86FEcwI/AAAAAAAAG8k/PcLWlYrRPr8xGXUsQ0RBuOUzK7nSIsyyACLcBGAs/s1600/Gallery%2B%252837%2Bof%2B37%2529.jpg"
+                      alt="Figure 1"
+                      width="100%"
+                    />
+                  </figure>
+                  <h2 class="article__headline--with-image">
                     Google opens new innovation space in San Francisco for the
                     developer community
                   </h2>
@@ -100,61 +167,56 @@
                     <figure></figure>
                     <cite>Joe Doe</cite> <time>Jan 31, 2019</time>
                   </author>
-                </cover>
-                <desc>
-                  <p>
+                </div>
+                <div class="article__desc">
+                  <p class="article__summary">
                     Google's Developer Relations team is opening a new
                     innovation space at 543 Howard St. in San Francisco.
                   </p>
-                </desc>
+                </div>
               </article>
             </a>
           </div>
           <div class="grid__item" role="listitem">
             <a href="#" class="card">
-              <article class="text">
-                <cover>
-                  <h2>Making creative tools more accessible for everyone</h2>
-                  <author>
-                    <figure></figure>
-                    <cite>Joe Doe</cite> <time>Jan 31, 2019</time>
-                  </author>
-                </cover>
-                <desc>
-                  <p>
-                    Google's Developer Relations team is opening a new
-                    innovation space at 543 Howard St. in San Francisco.
-                  </p>
-                </desc>
-              </article>
-            </a>
-          </div>
-          <div class="grid__item" role="listitem">
-            <a href="#" class="card">
-              <article class="image">
-                <cover>
-                  <figure>
-                    <img
-                      src="https://storage.googleapis.com/gd-wagtail-prod-assets/images/ANDROIDFONTS_3x2.max-1200x800.jpegquality-90.png"
-                      alt="Figure 2"
-                      width="100%"
-                    />
-                  </figure>
-                  <h2 class="headline headline--two-small">
-                    Helping families develop healthy digital habits with
-                    Chromebooks
+              <article class="article">
+                <div class="article__cover">
+                  <h2>
+                    Adapting to the needs of learners, educators and schools
+                    with Chromebooks
                   </h2>
                   <author>
                     <figure></figure>
                     <cite>Joe Doe</cite> <time>Jan 31, 2019</time>
                   </author>
-                </cover>
-                <desc>
-                  <p>
+                </div>
+                <div class="article__desc">
+                  <p class="article__summary">
                     Google's Developer Relations team is opening a new
                     innovation space at 543 Howard St. in San Francisco.
                   </p>
-                </desc>
+                </div>
+              </article>
+            </a>
+          </div>
+          <div class="grid__item">
+            <a href="#" class="card">
+              <article class="article">
+                <div class="article__cover">
+                  <h2>
+                    Choose your own adventure with 13 Google for Education tools
+                  </h2>
+                  <author>
+                    <figure></figure>
+                    <cite>Joe Doe</cite> <time>Jan 31, 2019</time>
+                  </author>
+                </div>
+                <div class="article__desc">
+                  <p class="article__summary">
+                    Google's Developer Relations team is opening a new
+                    innovation space at 543 Howard St. in San Francisco.
+                  </p>
+                </div>
               </article>
             </a>
           </div>
