@@ -12,20 +12,20 @@
 //
 // =============================================================================
 
+// TODO: Collection needs to use image tags instead of these
+// background images.
 #collection-1 {
   background-image: url(/img/collection-cover-1.png);
 }
-
 #collection-2 {
   background-image: url(/img/collection-cover-2.png);
 }
 
-collection {
+.collection {
   display: block;
   position: relative;
-}
+  padding: 24px;
 
-.collection--large {
   @include bp(md) {
     -webkit-box-align: stretch;
     -webkit-box-direction: normal;
@@ -40,7 +40,7 @@ collection {
   }
 }
 
-collection cover {
+.collection__cover {
   align-items: center;
   border-radius: 6px;
   border: 1px solid #dadce0;
@@ -67,7 +67,7 @@ collection cover {
   }
 }
 
-collection cover figure {
+.collection__figure {
   background-color: #fcfcfd;
   background-position: 100% 50%;
   background-repeat: no-repeat;
@@ -83,11 +83,11 @@ collection cover figure {
   z-index: -1;
 }
 
-collection cover h2 {
+.collection__headline {
   margin-right: 144px;
 }
 
-collection desc {
+.collection__desc {
   display: block;
   grid-column-end: span 4;
   margin: 0;
@@ -97,7 +97,7 @@ collection desc {
   }
 }
 
-collection desc::before {
+.collection__desc::before {
   content: "";
   display: block;
   width: 64px;
@@ -105,13 +105,13 @@ collection desc::before {
   background-color: #3740FF;
 }
 
-collection desc::before,
-collection desc .info {
+.collection__desc::before,
+.collection__info-list {
   position: absolute;
-  top: -48px; // Match the margin-top of the cover
+  top: 24px;
 
   @include bp(sm) {
-    top: -56px; // Match the margin-top of the cover
+    top: 32px;
   }
   
   @include bp(md) {
@@ -119,7 +119,7 @@ collection desc .info {
   }
 }
 
-collection desc .info {
+.collection__info-list {
   margin: 0;
   list-style: none;
   padding: 12px 0 0;
@@ -127,7 +127,7 @@ collection desc .info {
   overflow: hidden;
 }
 
-collection desc .info li {
+.collection__info-listitem {
   display: block;
   float: left;
   font-family: "Google Sans", san-sans-serif;
@@ -139,23 +139,23 @@ collection desc .info li {
   }
 }
 
-collection desc .info li::after {
+.collection__info-listitem::after {
   content: "·";
   display: inline-block;
   margin: 0 8px;
 }
 
-collection desc .info .category {
+.collection__info-listitem--category {
   color: #3740FF;
   font-weight: 500;
 }
 
-collection desc .info li:last-of-type::after {
+.collection__info-listitem:last-of-type::after {
   content: "";
   margin: 0;
 }
 
-collection desc .info .more-info::after {
+.collection__info-listitem--more-info::after {
   content: "";
 
   @include bp(sm) {
@@ -163,7 +163,7 @@ collection desc .info .more-info::after {
   }
 }
 
-collection desc .info .updated {
+.collection__info-listitem--updated {
   display: none;
 
   @include bp(sm) {
@@ -171,9 +171,9 @@ collection desc .info .updated {
   }
 }
 
-collection p {
-  font-size: 1em;
+.collection__summary {
+  font-size: 16px;
   line-height: 1.5em;
   color: #202124;
-  margin: 1em 0;
+  margin: 16px 0;
 }
