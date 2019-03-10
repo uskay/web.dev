@@ -1,3 +1,5 @@
+@import '../settings/colors';
+
 // =============================================================================
 // AUTHOR OVERVIEW
 //
@@ -7,59 +9,57 @@
 //
 // =============================================================================
 
-author {
-  display: block;
-  margin: calc(1em - 8px) -8px -8px;
+.author {
+  display: flex;
   padding: 8px;
-  max-width: 240px;
 }
 
-author figure {
+.author__image {
   width: 40px;
   height: 40px;
-  border-radius: 20px;
-  float: left;
-  margin: 0 12px 0 0 !important;
-  background-color: #dadce0;
+  border-radius: 50%;
+  margin: 0 12px 0 0;
+  background-color: $GREY_300;
+  overflow: hidden;
 }
 
-author cite,
-author time {
+.author__name,
+.author__published {
   display: block;
-  font-size: 0.875em;
-  line-height: 1.428em;
+  font-size: 14px;
+  line-height: 20px;
   font-style: normal;
 }
 
-author cite {
-  color: #202124;
+.author__name {
+  color: $GREY_900;
 }
 
-author time {
-  color: #5F6368;
+.author__published {
+  color: $GREY_700;
 }
 
-author ul {
+.author__link-list {
   display: block;
   overflow: hidden;
-  margin: 0 !important;
-  list-style: none !important;
+  margin: 0;
+  list-style: none;
 }
 
-author ul li {
-  font-size: 0.875em !important;
-  line-height: 1.429em !important;
-  margin: 0 !important;
+.author__link-listitem {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
   float: left;
 }
 
-author ul li::after {
+.author__link-listitem::after {
   content: "·";
   display: inline-block;
   margin: 0 4px;
 }
 
-author ul li:last-of-type::after {
+.author__link-listitem:last-of-type::after {
   content: "";
   margin: 0;
 }
