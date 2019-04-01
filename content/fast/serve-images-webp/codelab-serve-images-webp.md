@@ -9,6 +9,8 @@ web_published_on: 2018-11-05
 glitch: webp-cli
 ---
 
+foo
+
 The webp
 <a href="https://developers.google.com/speed/webp/docs/precompiled">command line tool</a>
 has already been installed for you, so you're all set to get started. This tool
