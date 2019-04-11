@@ -66,3 +66,5 @@ dist
 # deploy scripts
 devsite.js
 local-devsite.js
+
+.DS_Store

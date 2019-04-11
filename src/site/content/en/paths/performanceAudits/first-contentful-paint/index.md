@@ -1,8 +1,8 @@
 ---
 layout: post
-title: First contentful paint
+title: First Contentful Paint
 description: |
-  Lorem ipsum dolor set...
+  Reference documentation for the "First Contentful Paint" Lighthouse audit.
 author: megginkearney
 web_lighthouse:
   - first-contentful-paint
@@ -10,404 +10,120 @@ tags:
   - pathItem
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem. Integer et erat ac mi scelerisque suscipit et vitae nulla. Aliquam
-scelerisque efficitur ante ut facilisis. Aenean et risus fringilla, hendrerit
-sapien et, tincidunt orci. Aenean sed tellus aliquam, consectetur metus in,
-tempus enim.
-
-<div class="w-aside w-aside--codelab">
-  <strong>Codelab:</strong>
-  <a href="#">Using Imagemin with Grunt</a>
-</div>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem. Integer et erat ac mi scelerisque suscipit et vitae nulla. Aliquam
-scelerisque efficitur ante ut facilisis. Aenean et risus fringilla, hendrerit
-sapien et, tincidunt orci. Aenean sed tellus aliquam, consectetur metus in,
-tempus enim.
-
-<figure class="w-figure w-figure--fullbleed">
-  <img src="a.jpg" alt="">
-  <figcaption class="w-figcaption w-figcaption--fullbleed">
-    Fig. 1 — Large image.
-  </figcaption>
-</figure>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
+First Contentful Paint (FCP) is one of six metrics tracked in the performance section of the Lighthouse report.
+Each of these metrics captures some aspect of page load speed.
+FCP specifically captures the time from navigation to when the browser renders the first bit of content from the DOM.
 
 <figure class="w-figure">
-  <img src="image-small.png" alt="" style="max-width: 400px;">
-  <figcaption class="w-figcaption">
-    Fig. 2 — Small image.
-  </figcaption>
-</figure>
+    <img class="w-screenshot w-screenshot--filled" src="first-contentful-paint.png" alt="Lighthouse: First Contentful Paint metric">
+    <figcaption class="w-figcaption">
+      Fig. 1 — First Contentful Paint metric.
+    </figcaption>
+  </figure>
 
-<div class="w-aside w-aside--note">
-  Lorem ipsum dolor sit amet,
-  <a href="#">consectetur adipiscing elit</a>. Proin dictum a massa sit
-  amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh
-  varius at. <code>Cras ligula lacus</code>, porta vitae maximus a,
-  ultrices a mauris. <a href="#"><code>Vestibulum porta</code></a> dolor
-  erat, vel molestie dolor posuere in. Nam vel elementum augue.
-</div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
+## More on the time period FCP represents
 
-## Image, Inline
+As explained in the [Paint Timing specification](https://w3c.github.io/paint-timing/#first-contentful-paint),
+First Contentful Paint reports the "time when the browser first renders any text, image (including background images), non-white canvas or SVG". It doesn't include content within an iframe, but it does include text with pending web fonts.
+The Lighthouse reports displays the FCP time period in seconds.
 
-<figure class="w-figure w-figure--inline-right">
-  <img class="w-screenshot" src="image-inline.png" alt="" style="max-width: 200px;">
-  <figcaption class="w-figcaption">
-    Fig. 3 — Inline right, outlined image.
-  </figcaption>
-</figure>
+## How Lighthouse determines your FCP score
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum
-a massa sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh
-varius at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris.
-Vestibulum porta dolor erat, vel molestie dolor posuere in. Nam vel elementum
-augue. Nam quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce
-aliquet urna ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet
-velit. Morbi at quam sem.
+In order to be able to calculate your overall performance score,
+Lighthouse assigns each performance metric an individual score between 0 - 100.
+The FCP score, in it's simplest terms, is based on a comparison between how fast your FCP is,
+compared to [FCP metrics of real website performance data on 
+HTTParchive](https://httparchive.org/reports/loading-speed#fcp).
 
-<figure class="w-figure w-figure--inline-left">
-  <img class="w-screenshot" src="image-inline.png" alt="" style="max-width: 200px;">
-  <figcaption class="w-figcaption">
-    Fig. 4 — Inline left, outlined image.
-  </figcaption>
-</figure>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum
-a massa sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh
-varius at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris.
-Vestibulum porta dolor erat, vel molestie dolor posuere in. Nam vel elementum
-augue. Nam quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce
-aliquet urna ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet
-velit. Morbi at quam sem.
-
-<figure class="w-figure">
-  <img class="w-screenshot w-screenshot--filled" src="image-screenshot.png" alt="">
-  <figcaption class="w-figcaption">
-    Fig. 5 — Filled screenshot.
-  </figcaption>
-</figure>
-
-<div class="w-aside w-aside--caution">
-  <strong>Caution:</strong>
-  <a href="#">This type of callout</a> suggests proceeding with caution.
-</div>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
+For example, sites performing in the top 99 percentile render FCP in about 1.5 seconds.
+If your website's FCP is 1.5 seconds,
+your FCP score is 99. This table helps explain how to interpret your FCP score:
 
 <div class="w-table-wrapper">
   <table>
     <thead>
       <tr>
-        <th>Image Format</th>
-        <th>Lossy Plugin(s)</th>
-        <th>Lossless Plugin(s)</th>
+        <th>FCP metric (in seconds)</th>
+        <th>Color-coding</th>
+        <th>FCP score (HTTParchive %-tile)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>JPEG</td>
-        <td><a href="#">imagemin-mozjpeg</a></td>
-        <td><a href="#">imagemin-jpegtran</a></td>
+        <td>0 - 2 seconds</td>
+        <td>Green (fast)</td> 
+        <td>75 - 100</td>
       </tr>
       <tr>
-        <td>PNG</td>
-        <td><a href="#">imagemin-pngquant</a></td>
-        <td><a href="#">imagemin-optipng</a></td>
+        <td>2 - 4 seconds</td>
+        <td>Orange (average)</td> 
+        <td>50 - 74</td>
       </tr>
       <tr>
-        <td>GIF</td>
-        <td><a href="#">imagemin-giflossy</a></td>
-        <td><a href="#">imagemin-gifsicle</a></td>
-      </tr>
-      <tr>
-        <td>SVG</td>
-        <td><a href="#">Imagemin-svgo</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>WebP</td>
-        <td><a href="#">imagemin-webp</a></td>
-        <td></td>
+        <td>Over 4 seconds</td>
+        <td>Red (slow)</td> 
+        <td>0 - 49</td>
       </tr>
     </tbody>
     <caption>Table 1 — Imagemin plugins for filetypes.</caption>
   </table>
 </div>
 
-<div class="w-aside w-aside--warning">
-  <strong>Warning:</strong>
-  This type of callout is stronger than a Caution; it means "Don't do
-  this."
-</div>
+## How your FCP score impacts overall performance score
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
+The overall Lighthouse performance score is a weighted-average of the performance metrics, including FCP, as well as,
+[First Meaningful Paint](/performance-audits/first-meaningful-paint), [First CPU Idle](/performance-audits/first-cpu-idle), [Time to Interactive](/performance-audits/time-to-interactive), and [Speed Index](/performance-audits/speed-index).
 
-## Ordered list
+Heavier-weighted metrics have a larger impact on the overall performance score.
+FCP is weighted 3, which means it has an average impact on the overall performance score
+(see [Scoring Details](https://docs.google.com/spreadsheets/d/1Cxzhy5ecqJCucdf1M0iOzM8mIxNc7mmx107o5nj38Eo/edit#gid=0) for specifics).
 
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Try also the [Scoring Calculator](https://docs.google.com/spreadsheets/d/1Cxzhy5ecqJCucdf1M0iOzM8mIxNc7mmx107o5nj38Eo/edit#gid=283330180) to get a better sense of how Lighthouse scoring works.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
 
-<ol>
-  <li>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-  sit amet ullamcorper.
-  </li>
-  <li>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-  sit amet ullamcorper.
-  <figure class="w-figure">
-    <img class="w-screenshot w-screenshot--filled" src="image-screenshot.png" alt="">
+## How to improve your performance score
+
+Improving your Lighthouse performance score
+isn't so much about tackling one performance metric at a time,
+but seeing page load speed more holistic.
+Anything you do to improve page load speed, will improve not just one performance metric,
+but quite likely all of these metrics.
+
+The most effective way to improve your performance score,
+is to fix the load opportunities highlighted in your Lighthouse report.
+The more significant the opportunity,
+the greater impact it will have on improving your performance score.
+
+<figure class="w-figure">
+    <img class="w-screenshot w-screenshot--filled" src="opportunities.png" alt="Lighthouse: Opportunities section">
     <figcaption class="w-figcaption">
-      Fig. 5 — Filled screenshot.
+      Fig. 2 — Opportunities section.
     </figcaption>
   </figure>
-  </li>
-  <li>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-  sit amet ullamcorper.
-  </li>
-</ol>
 
-<div class="w-aside w-aside--success">
-  <strong>Success:</strong>
-  This type of callout describes a successful action or an error-free
-  status.
-</div>
+For example,
+[Eliminate render-blocking resources](/performance-audits/render-blocking-resources)
+shows you opportunities to improve your page load speed (in seconds).
+Eliminate any one or all of the blocking resources, and not only will your FCP score improve,
+but so will additional performance metrics, and your overall Lighthouse performance score.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
+Detailed help on actioning each load opportunity can be accessed from the load opportunities section
+on the [Performance audits landing page](/performance-audits).
 
-## Unordered list
+## Tracking FCP on real user's devices
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+To measure when FCP actually occurs on your users' devices,
+see [Tracking FP/FCP](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fpfcp).
+This section describes how to programmatically access FCP data and submit it to Google Analytics.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
+See [Assessing Loading Performance in Real Life with Navigation and Resource Timing](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/)
+for more on collecting real-user metrics.
 
-<ul>
-  <li>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-  sit amet ullamcorper.
-  </li>
-  <li>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-  sit amet ullamcorper.
-  <figure class="w-figure">
-    <img class="w-screenshot w-screenshot--filled" src="image-screenshot.png" alt="">
-    <figcaption class="w-figcaption">
-      Fig. 5 — Filled screenshot.
-    </figcaption>
-  </figure>
-  </li>
-  <li>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-  sit amet ullamcorper.
-  </li>
-</ul>
+## More information
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
+- [FCP audit source](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/first-contentful-paint.js)
+- [Paint Timing specification](https://w3c.github.io/paint-timing)
+- [Lighthouse v3 Scoring Guide](https://developers.google.com/web/tools/lighthouse/v3/scoring)
 
-```js
-const imagemin = require("imagemin");
-const imageminMozjpeg = require("imagemin-mozjpeg");
 
-(async () => {
-  const files = await imagemin(
-    ["source_dir/*.jpg", "another_dir/*.jpg"],
-    "destination_dir",
-    { plugins: [imageminMozjpeg({ quality: 50 })] }
-  );
-  console.log(files);
-})();
-```
-
-<div class="w-aside w-aside--objective">
-  <strong>Objective:</strong>
-  This type of callout defines the goal of a procedure.
-</div>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris.
-
-<div class="w-aside w-aside--gotchas">
-  <strong>Gotchas!</strong>
-  <p>
-    The value of the <code>type</code> attribute should be the MIME type
-    corresponding to the image format. An image's MIME type and its file
-    extension are often similar, but they aren't necessarily the same
-    thing (e.g. <code>.jpg</code> vs. <code>image/jpeg</code>).
-  </p>
-</div>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
-
-<blockquote class="w-blockquote">
-  <p class="w-blockquote__text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum
-    a massa sit amet ullamcorper.
-  </p>
-  <cite class="w-blockquote__cite">
-    by Jon Doe
-  </cite>
-</blockquote>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
-
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    allow="geolocation; microphone; camera; midi; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/fav-kitties-starter?path=src/index.js&amp;previewSize=0"
-    alt="fav-kitties-starter on Glitch"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
-
-<div class="w-aside w-aside--key-term">
-  <strong>Key Term:</strong>
-  This type of callout defines important terminology.
-</div>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
-
-<div class="w-stats">
-  <div class="w-stat">
-    <p class="w-stat__figure">30<sub class="w-stat__sub">%</sub></p>
-    <p class="w-stat__desc">Lower cost per conversion</p>
-  </div>
-  <div class="w-stat">
-    <p class="w-stat__figure">13<sub class="w-stat__sub">%</sub></p>
-    <p class="w-stat__desc">Higher CTR</p>
-  </div>
-  <div class="w-stat">
-    <p class="w-stat__figure">4<sub class="w-stat__sub">x</sub></p>
-    <p class="w-stat__desc">Faster load times</p>
-  </div>
-</div>
-
-<div class="w-text--center">
-  <a href="https://example.com/some.pdf" class="w-button w-button--with-icon" data-icon="file_download">
-    Download case study 
-  </a>
-</div>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
-sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
-at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
-porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
-quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
-quam sem.
