@@ -6,6 +6,10 @@ const secure = require('./paths/secure');
 const installable = require('./paths/installable');
 
 const performanceAudits = require('./paths/performanceAudits');
+const accessibilityAudits = require('./paths/accessibilityAudits');
+const pwaAudits = require('./paths/pwaAudits');
+const seoAudits = require('./paths/seoAudits');
+const bestPracticesAudits = require('./paths/bestPracticesAudits');
 
 // =============================================================================
 // LEARN OVERVIEW
@@ -24,5 +28,9 @@ module.exports = {
     secure,
     installable,
     performanceAudits,
+    accessibilityAudits,
+    pwaAudits,
+    seoAudits,
+    bestPracticesAudits,
   ],
 };
