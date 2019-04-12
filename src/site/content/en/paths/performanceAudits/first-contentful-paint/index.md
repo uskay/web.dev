@@ -2,7 +2,7 @@
 layout: post
 title: First Contentful Paint
 description: |
-  Reference documentation for the "First Contentful Paint" Lighthouse audit.
+  Learn about the first-contentful-paint audit.
 author: megginkearney
 web_lighthouse:
   - first-contentful-paint
@@ -11,22 +11,20 @@ tags:
 ---
 
 First Contentful Paint (FCP) is one of six metrics tracked in the performance section of the Lighthouse report.
-Each of these metrics captures some aspect of page load speed.
-FCP specifically captures the time from navigation to when the browser renders the first bit of content from the DOM.
+Each of these metrics captures some aspect of page load speed. The Lighthouse reports displays the FCP time period in seconds:
 
 <figure class="w-figure">
-    <img class="w-screenshot w-screenshot--filled" src="first-contentful-paint.png" alt="Lighthouse: First Contentful Paint metric">
-    <figcaption class="w-figcaption">
-      Fig. 1 — First Contentful Paint metric.
-    </figcaption>
-  </figure>
+  <img class="w-screenshot w-screenshot--filled" src="first-contentful-paint.png" alt="Lighthouse: First Contentful Paint">
+  <figcaption class="w-figcaption">
+    Fig. 1 — First Contentful Paint
+  </figcaption>
+</figure>
 
+## What does FCP measure
 
-## More on the time period FCP represents
-
+FCP specifically captures the time from navigation to when the browser renders the first bit of content from the DOM.
 As explained in the [Paint Timing specification](https://w3c.github.io/paint-timing/#first-contentful-paint),
-First Contentful Paint reports the "time when the browser first renders any text, image (including background images), non-white canvas or SVG". It doesn't include content within an iframe, but it does include text with pending web fonts.
-The Lighthouse reports displays the FCP time period in seconds.
+it reports the "time when the browser first renders any text, image (including background images), non-white canvas or SVG". FCP doesn't include the time it takes for content to appear within an iframe, but it does include text with pending web fonts.
 
 ## How Lighthouse determines your FCP score
 
@@ -66,7 +64,7 @@ your FCP score is 99. This table helps explain how to interpret your FCP score:
         <td>0 - 49</td>
       </tr>
     </tbody>
-    <caption>Table 1 — Imagemin plugins for filetypes.</caption>
+    <caption>Table 1 — FCP metric compared to FCP score</caption>
   </table>
 </div>
 
@@ -81,7 +79,6 @@ FCP is weighted 3, which means it has an average impact on the overall performan
 
 Try also the [Scoring Calculator](https://docs.google.com/spreadsheets/d/1Cxzhy5ecqJCucdf1M0iOzM8mIxNc7mmx107o5nj38Eo/edit#gid=283330180) to get a better sense of how Lighthouse scoring works.
 
-
 ## How to improve your performance score
 
 Improving your Lighthouse performance score
@@ -90,26 +87,32 @@ but seeing page load speed more holistic.
 Anything you do to improve page load speed, will improve not just one performance metric,
 but quite likely all of these metrics.
 
-The most effective way to improve your performance score,
+The most effective way to improve your performance score
 is to fix the load opportunities highlighted in your Lighthouse report.
 The more significant the opportunity,
 the greater impact it will have on improving your performance score.
 
 <figure class="w-figure">
-    <img class="w-screenshot w-screenshot--filled" src="opportunities.png" alt="Lighthouse: Opportunities section">
-    <figcaption class="w-figcaption">
-      Fig. 2 — Opportunities section.
-    </figcaption>
-  </figure>
+  <img class="w-screenshot w-screenshot--filled" src="opportunities.png" alt="Lighthouse: Opportunities section">
+  <figcaption class="w-figcaption">
+    Fig. 2 — Opportunities section
+  </figcaption>
+</figure>
 
 For example,
 [Eliminate render-blocking resources](/performance-audits/render-blocking-resources)
-shows you opportunities to improve your page load speed (in seconds).
+shows opportunities to improve page load speed (in seconds).
 Eliminate any one or all of the blocking resources, and not only will your FCP score improve,
 but so will additional performance metrics, and your overall Lighthouse performance score.
 
-Detailed help on actioning each load opportunity can be accessed from the load opportunities section
-on the [Performance audits landing page](/performance-audits).
+In addition to the potential savings in the Opportunities section of the Lighthouse report,
+one Diagnostics audit of importance to FCP is
+[Ensure text remains visible during webfont load](/performance-audits/font-display).
+Font loads can significantly impact FCP so
+look for ways to speed up them up.
+
+Access detailed help on all performance audits from the Detailed help on all performance audits
+[Performance audits landing page](/performance-audits).
 
 ## Tracking FCP on real user's devices
 

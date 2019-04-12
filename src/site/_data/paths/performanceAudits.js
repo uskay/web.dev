@@ -46,6 +46,7 @@ module.exports = {
         'user-timings',
         'bootup-time',
         'mainthread-work-breakdown',
+        'font-display',
       ],
     },
   ],
