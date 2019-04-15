@@ -11,7 +11,8 @@ tags:
 ---
 
 First Contentful Paint (FCP) is one of six metrics tracked in the performance section of the Lighthouse report.
-Each of these metrics captures some aspect of page load speed. The Lighthouse reports displays the FCP time period in seconds:
+Each of these metrics captures some aspect of page load speed.
+The Lighthouse reports displays the FCP time period in seconds:
 
 <figure class="w-figure">
   <img class="w-screenshot w-screenshot--filled" src="first-contentful-paint.png" alt="Lighthouse: First Contentful Paint">
@@ -111,8 +112,7 @@ one Diagnostics audit of importance to FCP is
 Font loads can significantly impact FCP so
 look for ways to speed up them up.
 
-Access detailed help on all performance audits from the Detailed help on all performance audits
-[Performance audits landing page](/performance-audits).
+Learn more about these potential savings from the [Performance audits landing page](/performance-audits).
 
 ## Tracking FCP on real user's devices
 
