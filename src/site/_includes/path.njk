@@ -42,7 +42,7 @@ layout: layout
       {% for slug in topic.pathItems %}
         {% for item in collections.pathItem %}
           {% if item.fileSlug === slug %}
-            {% ArticleSmall {post: item, author: authors[item.data.author]} %}
+            {% AuthorInfo {author: authors['robdodson']} %}
           {% endif %}
         {% endfor %}
       {% endfor %}
