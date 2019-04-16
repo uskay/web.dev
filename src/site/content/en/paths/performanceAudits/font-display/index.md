@@ -5,7 +5,7 @@ description: |
   Learn about the font-display audit.
 author: megginkearney
 web_lighthouse:
-  - font display
+  - font-display
 tags:
   - pathItem
 ---
