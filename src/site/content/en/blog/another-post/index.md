@@ -1,10 +1,11 @@
 ---
-title: "KV Storage: the Web's First Built-in Module"
+title: Move Ya! Or maybe, don't, if the user prefers-reduced-motion!
 author: robdodson
+date: 2019-04-21
 hero: hero.jpg
-alt: Craggy rocks on the sea shore.
+alt: An icon set displayed on a computer monitor.
 description: |
-  Why not just one more post?
+  Another post!
 tags:
   - post
 ---

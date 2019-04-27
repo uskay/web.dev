@@ -1,7 +1,7 @@
 ---
 title: Replacing a hot path in your app's JavaScript with WebAssembly
 author: robdodson
-date: 2018-12-06
+date: 2019-04-20
 hero: hero.jpg
 alt: A description for the hero image
 description: |
